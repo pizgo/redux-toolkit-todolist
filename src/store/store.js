@@ -1,11 +1,14 @@
-import {createStore, applyMiddleware } from 'redux';
-import thunkMiddleware from 'redux-thunk'
-import {rootReducer} from "./rootReducer";
-import {composeWithDevTools} from "redux-devtools-extension";
-import {myMiddleware} from "../exampleAddons/middleware";
+import { configureStore } from '@reduxjs/toolkit'
+import {todosReducer} from "./features/todosSlice";
+import {filtersReducer} from "./features/filterSlice";
 
-const composedEnhancer = composeWithDevTools(
-    applyMiddleware(thunkMiddleware)
-)
-const store = createStore(rootReducer, composedEnhancer )
+const store = configureStore({
+    reducer: {
+        todos: todosReducer,
+        filters: filtersReducer
+    }
+})
 export default store;
+
+//configureStore robi wszystko: łączy reducery w jeden, tworzy stora, dodaje thunk
+//middleware, reduxdev ext

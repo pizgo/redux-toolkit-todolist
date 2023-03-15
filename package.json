@@ -6,6 +6,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.12",
+    "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -16,10 +17,7 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-scripts": "^5.0.1",
-    "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.2",
-    "reselect": "^4.1.7",
     "seedrandom": "^3.0.5"
   },
   "scripts": {
